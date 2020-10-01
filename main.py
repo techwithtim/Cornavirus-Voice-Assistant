@@ -4,7 +4,7 @@ import pyttsx3
 import speech_recognition as sr
 import re
 import threading
-import time
+import datetime
 
 API_KEY = "{PUT-YOURS-HERE}"
 PROJECT_TOKEN = "{PUT-YOURS-HERE}"
@@ -95,7 +95,14 @@ def get_audio():
 
 	return said.lower()
 
-
+def wishMe():
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<=12:
+        speak("Good Morning!")
+    elif hour>=12 and hour <=18:
+        speak("Good Afternoon! ")
+    else:
+        speak("Good Evening!")
 def main():
 	print("Started Program")
 	data = Data(API_KEY, PROJECT_TOKEN)
