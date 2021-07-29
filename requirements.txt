@@ -7,4 +7,3 @@ pywin32==227
 requests==2.23.0
 SpeechRecognition==3.8.1
 urllib3==1.26.5
-ipaddress
